@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+    <title>Animation</title>
+    <style>
+        #container{
+            width: 500px;
+            margin: 20px auto;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 50px;
+        }
+        #box1{
+            background-color:pink;
+            border: 1px solid transparent;
+            animation-name: shape;
+            animation-duration: 3s;
+        }
+        #box2{
+            background-color: skyblue;
+            border: 1px solid transparent;
+            animation-name: rotate;
+            animation-duration: 3s;
+        }
+        @keyframes shape{
+            from{
+                border: 1px solid transparent;
+            }
+            to {
+                border: 1px solid hotpink;
+                border-radius: 50%;
+            }
+        }
+        @keyframes rotate{
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">  </div>
+</body>
+</html>

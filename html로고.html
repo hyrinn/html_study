@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+    <title>HTML5 로고</title>
+    <script>
+        function init(){
+            ctx=document.getElementById('canvas').getContext('2d');
+            ctx.fillStyle="#E34C26";
+            ctx.beginPath();
+            ctx.moveTo(39, 250);
+            ctx.lineTo(17,0);
+            ctx.lineTo(262,0);
+            ctx.lineTo(239, 250);
+            ctx.lineTo(139, 278);
+            ctx.closePath();
+            ctx.fill();
+        }
+    </script>
+</head>
+<body onLoad="init();">
+    <canvas id="canvas" width="600" height="400">
+        이 브라우저는 canvas 요소를 지원하지 않습니다.
+    </canvas>
+
+</body>
+</html>

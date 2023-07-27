@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+    <title>Animation</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 60px auto;
+            animation: rotate 1.5s infinite, background 1.5s infinite alternate;
+        }
+        @keyframes rotate {
+            from { transform: perspective(120px) rotateX(0deg) rotateY(0deg)}
+            50% { transform: perspective(120px) rotateX(-180deg) rotateY(0deg)}
+            to { transform: perspective(120px) rotateX(-180deg) rotateY(-180deg)}
+        }
+        @keyframes background {
+            from { background-color:bisque;}
+            50% { background-color: pink;}
+            to { background-color:mediumslateblue;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box"> </div>
+</body>
+</html>

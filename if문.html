@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>session선택-switch문</title>
+    <style>
+        body {
+            background-color:rgb(240, 221, 240);
+            color:navy;
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+        var session = prompt("보고 싶은 영화를 선택해주세용! 1. 엘리멘탈 2.트와일라잇 3.센과치히로의 행방불명");
+
+        switch(session){
+            case "1" : document.write ("<p>엘리멘탈은 <strong>H관</strong>에서 상영됩니다.</p>");
+            break;
+            case "2" : document.write("<p>트와일라잇은 <strong>C관</strong>에서 상영됩니다.</p>");
+            break;
+            case "3" : document.write("<p>센과 치히로의 행방불명은 <strong>J관</strong>에서 상영됩니다.</p>")
+        }
+    </script>
+
+</body>
+</html>
