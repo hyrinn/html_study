@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+    <title>JavaScript 노드변경</title>
+</head>
+<body>
+    <h2 style="color:lightsteelblue">텍스트 노드의 값 변경</h2>
+    <p id="text">내가 어제 먹은 맥도날드 아이스크림은 무슨 맛일까요 ~~?</p>
+    <button onclick="changeText()">정답 보기</button>
+    <script>
+        var para= document.getElementById("text");
+        function changeText(){
+            para.firstChild.nodeValue="딸기맛 아이스크림🍓";
+        }
+    </script>
+</body>
+</html>

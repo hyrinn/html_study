@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+    <title>JavaScript 노드복제</title>
+</head>
+<body>
+    <h2 style="color:darkgreen">cloneNode() 메소드</h2>
+    <button onclick="cloneElement()", style="color:fuchsia">100만원 추가!!</button>
+    <h2 id="item">통장잔액: +100만원</h2>
+    <div id="list">
+        <p>통장잔액: +5만원</p>
+        <p>통장잔액: -10만원</p>
+        <p>통장잔액: -10만원</p>
+    </div>
+    <script>
+        function cloneElement(){
+            var parent= document.getElementById("list");
+            var originItem = document.getElementById("item");
+            parent.appendChild(originItem.cloneNode(true));
+        }
+    </script>
+</body>
+</html>

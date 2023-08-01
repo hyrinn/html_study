@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+    <title>JavaScript 노드교체</title>
+</head>
+<body>
+    <h2 style="color:cadetblue">요소 노드의 교체</h2>
+    <div id="parent">
+        <p id="first">머리</p>
+        <p>몸통</p>
+    </div>
+    <p id="third">꼬리</p>
+    <button onclick="changeNode()">요소노드 교체!</button>
+    <script>
+        var parent = document.getElementById("parent");
+        var first= document.getElementById("first");
+        var third= document.getElementById("third");
+        function changeNode(){
+            parent.replaceChild(third, first);
+        }
+    </script>
+    
+</body>
+</html>

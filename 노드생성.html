@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+    <title>JavaScript Node Manage</title>
+</head>
+<body>
+    <h1>요소 노드의 생성</h1>
+    <p id="text">새로운 단락을 생성하여 이 단락 앞에 생성되게 할 것이다.</p>
+    <button onclick="createNode()">요소 노드 생성!</button>
+    <script>
+        function createNode(){
+            var criteriaNode = document.getElementById("text");
+            var newNode = document.createElement("p");
+            newNode.innerHTML = "새로 추가 된 단락입니다.";
+            document.body.insertBefore(newNode, criteriaNode);
+        }
+    </script>
+</body>
+</html>

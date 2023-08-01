@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+    <title>JavaScript 노드 제거</title>
+</head>
+<body>
+    <h2 style="color:navy">removeChild() 메소드</h2>
+    <button onclick="remove()", style="color: red">요소 노드 삭제!</button>
+    <div id="list">
+        <p>HTML</p>
+        <p id="item">삭제될 항목</p>
+        <p>CSS</p>
+    </div>
+    <script>
+        function remove(){
+            var parent = document.getElementById("list");
+            //아이디가 list인 요소를 선택함.
+            var removedItem = document.getElementById("item");
+            //아이디가 item인 요소를 선택함.
+            parent.removeChild(removedItem);
+            //지정된 요소를 삭제함.
+        }
+    </script>
+</body>
+</html>
