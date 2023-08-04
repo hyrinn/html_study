@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<head>
+    <title>Ajax Suggestion</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $ (function() {
+            $("#search_box").keyup(function() {
+                $.ajax({	// Ajax 요청을 작성하고 GET 방식으로 전송함.
+					url: "/examples/media/ajax_suggestion.php",
+					data: { keyword: $(this).val() },
+					method: "GET"
+                })
+                .done(function(result){
+                $("#suggestion_box").html(result);
+                })
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <h1>검색어 추천 기능</h1>
+    <p>대한민국의 도시를 영문으로 찾아보세용!</p>
+    <form action="/examples/media/tcpschool_request.php">
+		<input id="search_box" type="text" name="city" size="20">
+		<div id="suggestion_box"></div>
+	</form>
+</body>
+</html>
