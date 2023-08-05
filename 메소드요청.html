@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Ajax Method</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function() {
+			$("#requestBtn").on("click", function() {
+				$.ajax("/examples/media/request_ajax.php")
+				.done(function() {
+					alert("요청 성공");
+				})
+				.fail(function() {
+					alert("요청 실패");
+				})
+				.always(function() {
+					alert("요청 완료");
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+	<h1>$.ajax() 메소드</h1>
+	<button id="requestBtn">$.ajax() 메소드 실행</button>
+	<p id="text"></p>
+	
+</body>
+
+</html>
